@@ -29,7 +29,7 @@ import { joiValidationSchema } from './config/joi.validation';
 
 //MongooseModule.forRoot('mongodb://localhost:27017/nest-pokemon'), // quitamos y mandamos el parametro del archivo de variables
 // de entorno env
-MongooseModule.forRoot( process.env.MONGODB ?? '',{
+MongooseModule.forRoot( process.env.MONGODB !,{
   dbName: 'pokemonsdb',
 }), // agregue el signo  ?? '' poraue si no me daba error
     // no lo deje como estaba en el curso que era asi// dbName: 'pokemonsdb' "pokemonsdb": Unknown word. //
